@@ -2,7 +2,7 @@
 
 import argparse
 
-parser = argparse.ArgumentParser(description='Rename leaf labels of a tree using a tab delimited text file. First column should contain exact name of existing leaf. Second column is desired name. Make sure you have unix line endings')
+parser = argparse.ArgumentParser(description='Rename leaf labels of a tree using a tab delimited text file. First column should contain exact name of existing leaf. Second column is desired name. Make sure you have unix line endings. WARNING: If you have taxon names that are solely denoted by numbers and there are support values on the tree you are annotating, you may have problems.')
 parser.add_argument('-t','--table', required=True, nargs=1, help='required: specify the table of existing and desired names')
 parser.add_argument('-i','--inputFile', required=True, nargs=1, help='required: specify the input tree file ex: my.bestSupport.tre')
 parser.add_argument('-o','--output', required=True, nargs=1, help='required: specify the output file name ex: my.bestSupport.newLabels.tre')
